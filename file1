@@ -1,0 +1,42 @@
+lass LL{
+  node start;
+  class node{
+    int data;
+    node next;
+    node (int n){
+      data=n;
+      next=null;
+    }
+  }
+  public void insertEnd(int val){
+    node newnode=new node(val);
+    if(start == null) {
+      start = newnode;
+    }
+    else{
+      node tptr =start;
+      while(tptr.next != null){
+        tptr = tptr.next;
+      }
+      tptr.next=newnode;
+    }
+  }
+  public void display(){
+    node tptr=start;
+    while(tptr!=null){
+      System.out.print(tptr.data+" ");
+      tptr=tptr.next;
+      
+  }
+}
+}
+public class LinkedLis {
+  public static void main(String[] args){
+    LL Obj=new LL();
+    Obj.insertEnd(10);
+    Obj.insertEnd(20);
+    Obj.insertEnd(30);
+    Obj.display();
+  }
+  
+}
