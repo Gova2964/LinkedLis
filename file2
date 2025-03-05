@@ -1,0 +1,35 @@
+class LL{
+  node start;
+  class node{
+    int data;
+    node next;
+    node (int n){
+      data=n;
+      next=null;
+    }
+  }
+  public void insertEnd(int val){
+    node newnode=new node(val);
+    newnode.next=start;
+    start=newnode;
+    
+    }
+     public void display(){
+    node tptr=start;
+    while(tptr!=null){
+      System.out.print(tptr.data+" ");
+      tptr=tptr.next;
+      
+  }
+}
+}
+public class LinkedLis {
+  public static void main(String[] args){
+    LL Obj=new LL();
+    Obj.insertEnd(10);
+    Obj.insertEnd(20);
+    Obj.insertEnd(30);
+    Obj.display();
+  }
+  
+}
